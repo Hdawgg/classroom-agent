@@ -1,0 +1,41 @@
+{
+  "courses": [
+    {
+      "id": "c_ai_401",
+      "name": "Artificial Intelligence (CS401)",
+      "section": "Batch B - Lab",
+      "instructor": "Dr. Ayesha Hakim"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "lab_04",
+      "courseId": "c_ai_401",
+      "title": "Lab 04: A* Search Algorithm for Romania Route Finding",
+      "course": "Artificial Intelligence (CS401)",
+      "description": "Implement A* Search to find the optimal path from Arad to Bucharest on the Romania map using straight-line distance heuristics h(n). Calculate total path cost g(n) and print the sequence of cities visited.",
+      "attachment": "Graph:\nArad: [('Zerind', 75), ('Sibiu', 140), ('Timisoara', 118)]\nZerind: [('Arad', 75), ('Oradea', 71)]\nOradea: [('Zerind', 71), ('Sibiu', 151)]\nSibiu: [('Arad', 140), ('Oradea', 151), ('Fagaras', 99), ('Rimnicu Vilcea', 80)]\nTimisoara: [('Arad', 118), ('Lugoj', 111)]\nLugoj: [('Timisoara', 111), ('Mehadia', 70)]\nMehadia: [('Lugoj', 70), ('Drobeta', 75)]\nDrobeta: [('Mehadia', 75), ('Craiova', 120)]\nCraiova: [('Drobeta', 120), ('Pitesti', 138), ('Rimnicu Vilcea', 146)]\nRimnicu Vilcea: [('Sibiu', 80), ('Craiova', 146), ('Pitesti', 97)]\nFagaras: [('Sibiu', 99), ('Bucharest', 211)]\nPitesti: [('Rimnicu Vilcea', 97), ('Craiova', 138), ('Bucharest', 101)]\nBucharest: [('Fagaras', 211), ('Pitesti', 101)]\n\nHeuristics h(n) to Bucharest:\nArad: 366, Bucharest: 0, Craiova: 160, Drobeta: 242, Fagaras: 176, Lugoj: 244, Mehadia: 241, Oradea: 380, Pitesti: 100, Rimnicu Vilcea: 193, Sibiu: 253, Timisoara: 329, Zerind: 374.",
+      "submissionState": "CREATED",
+      "dueDate": "2026-10-06"
+    },
+    {
+      "id": "lab_05",
+      "courseId": "c_ai_401",
+      "title": "Lab 05: Minimax Algorithm with Alpha-Beta Pruning",
+      "course": "Artificial Intelligence (CS401)",
+      "description": "Implement Minimax search with Alpha-Beta Pruning for a game tree of depth 3 with branching factor 2. Leaf utility values: [3, 5, 6, 9, 1, 2, 0, -1]. Identify root optimal value and count pruned branches.",
+      "attachment": "Leaf values (left to right): [3, 5, 6, 9, 1, 2, 0, -1]",
+      "submissionState": "CREATED",
+      "dueDate": "2026-10-12"
+    },
+    {
+      "id": "lab_03",
+      "courseId": "c_ai_401",
+      "title": "Lab 03: Breadth-First & Depth-First Search",
+      "course": "Artificial Intelligence (CS401)",
+      "description": "Implement BFS and DFS on an unweighted state space graph.",
+      "submissionState": "TURNED_IN",
+      "dueDate": "2026-09-20"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "_comment": "Sample courses for study mode --offline/--dry-run. Same shape as live data after attachments are read.",
+  "courses": [
+    {
+      "id": "sample-ai",
+      "name": "Artificial Intelligence (CS401)",
+      "section": "TE Comp B",
+      "items": [
+        {
+          "id": "sample-cw-04",
+          "kind": "Assignment",
+          "title": "Lab 04: A* Search Algorithm for Romania Route Finding",
+          "description": "Implement A* search to find the shortest route from Arad to Bucharest on the Romania map. Use straight-line distance to Bucharest as the heuristic. Print the path, its cost and the order in which nodes are expanded.",
+          "due": "2026-10-20",
+          "topic": "Informed Search",
+          "created": "2026-10-01T09:00:00Z",
+          "attachments": [
+            {
+              "type": "drive", "title": "Lab04_AStar_Handout.pdf", "mime": "PDF", "status": "read",
+              "text": "A* Search\n\nA* evaluates nodes with f(n) = g(n) + h(n), where g(n) is the path cost from the start to n and h(n) is the estimated cost from n to the goal.\n\nAlgorithm:\n1. Put the start node on the frontier (a priority queue ordered by f).\n2. Pop the node with the lowest f. If it is the goal, return the path.\n3. Otherwise expand it: for each neighbour compute g = g(parent) + step cost and f = g + h. Add or update it on the frontier if this g is better than any seen before.\n4. Repeat until the frontier is empty.\n\nAdmissible heuristic: never overestimates the true cost to the goal. With an admissible heuristic, tree-search A* is optimal.\nConsistent (monotone) heuristic: h(n) <= c(n, n') + h(n') for every successor n'. Consistency implies admissibility and makes graph-search A* optimal.\n\nStraight-line distances to Bucharest: Arad 366, Sibiu 253, Rimnicu Vilcea 193, Fagaras 176, Pitesti 100, Timisoara 329, Zerind 374, Bucharest 0.\nRoad costs: Arad-Sibiu 140, Arad-Timisoara 118, Arad-Zerind 75, Sibiu-Fagaras 99, Sibiu-Rimnicu Vilcea 80, Rimnicu Vilcea-Pitesti 97, Pitesti-Bucharest 101, Fagaras-Bucharest 211.\n\nExpected result: Arad -> Sibiu -> Rimnicu Vilcea -> Pitesti -> Bucharest, cost 418.\nComplexity: exponential in the worst case, O(b^d) time and space."
+            },
+            {"type": "youtube", "title": "A* Search Explained", "url": "https://www.youtube.com/watch?v=example", "status": "not_fetched", "reason": "youtube not fetched (only Drive files are read)"}
+          ]
+        },
+        {
+          "id": "sample-mat-01",
+          "kind": "Material",
+          "title": "Uninformed Search: BFS, DFS, DLS, IDDFS",
+          "description": "Slides for unit 2.",
+          "topic": "Uninformed Search",
+          "created": "2026-09-20T09:00:00Z",
+          "attachments": [
+            {
+              "type": "drive", "title": "Unit2_Uninformed_Search", "mime": "Google Slides", "status": "read",
+              "text": "--- Slide 1 ---\nUninformed (blind) search: uses only the problem definition, no domain knowledge.\n--- Slide 2 ---\nBreadth-first search (BFS): expands the shallowest node first using a FIFO queue. Complete; optimal when all step costs are equal. Time and space O(b^d).\n--- Slide 3 ---\nDepth-first search (DFS): expands the deepest node first using a LIFO stack. Not complete in infinite spaces, not optimal. Space O(bm).\n--- Slide 4 ---\nDepth-limited search (DLS): DFS with a depth limit l. Fails if the shallowest goal is deeper than l.\n--- Slide 5 ---\nIterative deepening DFS (IDDFS): runs DLS with l = 0, 1, 2, ... Complete and optimal for equal step costs, with O(bd) space.\nExample graph: A -> B, C; B -> D, E; C -> F. BFS order from A: A B C D E F. DFS order (left first): A B D E C F."
+            },
+            {"type": "drive", "title": "Unit2_scanned_notes.pdf", "mime": "PDF", "status": "skipped", "reason": "no extractable text - probably a scanned PDF (images only)"}
+          ]
+        },
+        {
+          "id": "sample-mat-02",
+          "kind": "Material",
+          "title": "Propositional Logic and Resolution",
+          "description": "Read before the logic lab: propositional syntax and semantics, CNF conversion, resolution refutation.",
+          "topic": "Logic",
+          "created": "2026-10-05T09:00:00Z",
+          "attachments": [
+            {"type": "drive", "title": "Logic_Reference.xlsx", "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "status": "skipped", "reason": "unsupported file type (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)"}
+          ]
+        },
+        {
+          "id": "sample-ann-01",
+          "kind": "Announcement",
+          "description": "Hello everyone! The IA-2 viva will be held on 25 October in Lab 3. Revise uninformed and informed search, especially A* and admissible heuristics.",
+          "created": "2026-10-08T09:00:00Z",
+          "attachments": []
+        },
+        {
+          "id": "sample-ann-02",
+          "kind": "Announcement",
+          "description": "Dear All,\n\nSubmission rules for IA1 report: upload a single PDF named RollNo_Name.pdf before 15 September. Late submissions will not be accepted. The report must follow the template and include the PEAS description of your agent, the environment type and a short literature review.\n\nRegards",
+          "created": "2026-09-11T05:30:00Z",
+          "attachments": [
+            {"type": "drive", "title": "IA1_Report_Template.docx", "mime": "Word .docx", "size": 48213, "status": "read",
+             "text": "IA1 Report Template\n1. Title page\n2. Problem statement\n3. PEAS description (Performance measure, Environment, Actuators, Sensors)\n4. Environment properties: fully/partially observable, deterministic/stochastic, episodic/sequential, static/dynamic, discrete/continuous, single/multi-agent\n5. Literature review (at least 3 papers)\n6. Conclusion"},
+            {"type": "drive", "title": "IA1_Rubrics.pdf", "mime": "PDF", "size": 102400, "status": "read",
+             "text": "Rubrics: PEAS correctness 5 marks, environment analysis 5 marks, literature review 5 marks, presentation 5 marks."},
+            {"type": "drive", "title": "Sample_report_scan.pdf", "mime": "PDF", "size": 3145728, "status": "skipped", "reason": "no extractable text - probably a scanned PDF (images only)"}
+          ]
+        },
+        {
+          "id": "sample-ann-03",
+          "kind": "Announcement",
+          "description": "Dear Students,\nPFA",
+          "created": "2026-09-02T08:00:00Z",
+          "attachments": [
+            {"type": "drive", "title": "AI_Module1.pdf", "mime": "PDF", "size": 812000, "status": "read",
+             "text": "Module 1: Introduction to AI. Intelligent agents, rationality, PEAS. Agent types: simple reflex, model-based reflex, goal-based, utility-based, learning agents. Turing test and the four approaches to AI (thinking/acting humanly/rationally)."},
+            {"type": "drive", "title": "PEAS.png", "mime": "image/png", "size": 230000, "status": "skipped", "reason": "unsupported file type (image/png)"},
+            {"type": "drive", "title": "Module1_Agents.pptx", "mime": "PowerPoint .pptx", "size": 1500000, "status": "read",
+             "text": "--- Slide 1 ---\nAgents and environments\n--- Slide 2 ---\nAn agent perceives its environment through sensors and acts through actuators.\n--- Slide 3 ---\nRational agent: selects the action expected to maximise its performance measure, given the percept sequence and built-in knowledge."},
+            {"type": "link", "title": "AIMA chapter 2 online", "url": "https://aima.cs.berkeley.edu/", "status": "not_fetched", "reason": "link not fetched (only Drive files are read)"}
+          ]
+        },
+        {
+          "id": "sample-ann-04",
+          "kind": "Announcement",
+          "description": "Dear All,",
+          "created": "2026-09-25T04:00:00Z",
+          "attachments": []
+        },
+        {
+          "id": "sample-ann-05",
+          "kind": "Announcement",
+          "description": "Dear all",
+          "created": "2026-09-25T09:00:00Z",
+          "attachments": []
+        },
+        {
+          "id": "sample-ann-06",
+          "kind": "Announcement",
+          "description": "Good morning,\nHi\nPlease find attached the PEAS examples for Module 1 (vacuum world, taxi driver, medical diagnosis).\nThanks",
+          "created": "2026-09-05T03:00:00Z",
+          "attachments": [
+            {"type": "drive", "title": "PEAS_examples.pdf", "mime": "PDF", "size": 64000, "status": "read",
+             "text": "PEAS examples. Automated taxi: Performance - safe, fast, legal, comfortable trip; Environment - roads, traffic, pedestrians; Actuators - steering, accelerator, brake, horn; Sensors - cameras, sonar, GPS, speedometer. Vacuum world: Performance - cleanliness; Environment - two squares A and B; Actuators - left, right, suck; Sensors - location and dirt sensor."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sample-os",
+      "name": "Operating Systems (CS402)",
+      "section": "",
+      "items": [
+        {
+          "id": "sample-os-01",
+          "kind": "Material",
+          "title": "CPU Scheduling",
+          "description": "",
+          "topic": "Process Management",
+          "created": "2026-09-15T09:00:00Z",
+          "attachments": [
+            {
+              "type": "drive", "title": "CPU_Scheduling.docx", "mime": "Word .docx", "status": "read",
+              "text": "CPU scheduling decides which ready process runs next.\n\nFCFS: first come, first served. Non-preemptive. Suffers from the convoy effect.\n\nSJF: shortest job first. Optimal average waiting time, but needs burst times in advance. The preemptive version is SRTF.\n\nRound Robin: each process gets a time quantum q, then goes to the back of the ready queue. Small q means more context switches; large q behaves like FCFS.\n\nExample: P1 burst 5, P2 burst 3, P3 burst 1, all arriving at time 0, q = 2. RR order: P1 (0-2), P2 (2-4), P3 (4-5), P1 (5-7), P2 (7-8), P1 (8-9).\nWaiting time = turnaround time - burst time."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+# Secrets (never push)
+.env
+credentials.json
+token.json
+
+# Python environment and caches
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Generated output and local data
+submissions/
+study/
+.study_cache/
+*.log
+
+# Personal / project notes
+context.md
+
+# Report drafts
+*.docx
+*.pdf
+
+# Editor and OS clutter
+.vscode/
+.idea/
+__MACOSX/
+.DS_Store
+Thumbs.db
+desktop.ini
